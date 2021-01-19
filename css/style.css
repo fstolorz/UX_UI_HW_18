@@ -9,10 +9,15 @@ body{
     width: 90%;
     margin: 0 auto;
     padding: 10px;
+    overflow: hidden;
 }
 
 header{
     background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
 }
 
 header::after{
@@ -38,7 +43,9 @@ nav ul{
 }
 
 nav li{
-    display: inline-block;
+    float: left;
+    display: block;
+    text-align: center;
     margin-left: 70px;
     padding-top: 25px;
     position: relative;
@@ -72,8 +79,10 @@ nav a:hover::before{
 
 .content{
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     align-items: center;
-    justify-content: center;
 
 }
 
@@ -204,6 +213,7 @@ footer a:hover{
     margin-right: auto;
     margin-top: 20px;
 }
+
 h1{
     font-size: 30px;
 }
@@ -238,5 +248,60 @@ p{
     border-radius: 50px;
     height: 35px;
     align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+
+    .projects{
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 230px;
+    grid-template-areas:
+    "givingforgood"
+    "usps"
+    "bookbar"
+    "adventuroo";
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.flexContainer div{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description{
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    align-items: center;
+
+}
+
+nav li{
+    float: none;
+    width: 60%;
+}
+
 }
 
